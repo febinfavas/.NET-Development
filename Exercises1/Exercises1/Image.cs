@@ -4,11 +4,12 @@ namespace Exercises1
 {
     public class Image
     {
-        public float width, height;
-
-        public void isLandorProt(float w,float h)
+        public void isLandorProt()
         {
-            var result = (w > h) ? "Landscape" : "Protrait";
+            Console.WriteLine("Enter Width and Height");
+            var width = Convert.ToInt32(Console.ReadLine());
+            var height = Convert.ToInt32(Console.ReadLine());
+            var result = (width > height) ? "Protrait" : "Landscape";
             Console.WriteLine(result);
         }
     }

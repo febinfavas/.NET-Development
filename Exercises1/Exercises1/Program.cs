@@ -2,58 +2,48 @@
 
 namespace Exercises1
 {
-    public class SpeedCamera
-    {
-        public int speedLimit,speed;
-
-        public void speedChecking(int speed)
-        {
-            if (speed <= speedLimit)
-            {
-                Console.WriteLine("OK");
-            }
-            else
-            {
-                var extraspeed = speed - speedLimit;
-                var demereit = extraspeed / 5;
-                if (demereit <= 12)
-                {
-                    Console.WriteLine("Demerit point = "+ demereit);
-                }
-                else
-                {
-                    Console.WriteLine("License Suspended");
-                }
-            }
-        }
-    }
     class Program
     {
         static void Main(string[] args)
         {
             var ifcheck = new IfCheck();
-            Console.WriteLine("Enter a number");
-            ifcheck.num = Convert.ToInt32(Console.ReadLine());
-            ifcheck.IfChecking(ifcheck.num);
-
             var conditional = new Conditional();
-            Console.WriteLine("Enter Two numbers");
-            conditional.num1 = Convert.ToInt32(Console.ReadLine());
-            conditional.num2 = Convert.ToInt32(Console.ReadLine());
-            conditional.ismaximum(conditional.num1, conditional.num2);
-
             var image = new Image();
-            Console.WriteLine("Enter Width and Height");
-            image.width= Convert.ToInt32(Console.ReadLine());
-            image.height= Convert.ToInt32(Console.ReadLine());
-            image.isLandorProt(image.width, image.height);
-
             var speedCam = new SpeedCamera();
-            Console.WriteLine("Enter The Speed Limit");
-            speedCam.speedLimit= Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter The Speed of cart");
-            speedCam.speed = Convert.ToInt32(Console.ReadLine());
-            speedCam.speedChecking(speedCam.speed);
+
+
+            Console.WriteLine(@"
+                        Menu
+                1.Valid or Invalid
+                2.Maxium of 2 Numbers
+                3.Protrait or LandScape
+                4.SpeedCamera");
+            var select = Convert.ToInt32(Console.ReadLine());
+
+            switch (select)
+            {
+                case 1:
+                    Console.WriteLine("\tValid or Invalid");
+                    ifcheck.IfChecking();
+                    break;
+                case 2:
+                    Console.WriteLine("\tMaxium of 2 Numbers");
+                    conditional.ismaximum();
+                    break;
+                case 3:
+                    Console.WriteLine("\tProtrait or LandScape");
+                    image.isLandorProt();
+                    break;
+                case 4:
+                    Console.WriteLine("\tSpeedCamera");
+                    speedCam.speedChecking();
+                    break;
+                default:
+                    Console.WriteLine("Invalid Option");
+                    break;
+            }
+            
+            
         }
     }
 }
