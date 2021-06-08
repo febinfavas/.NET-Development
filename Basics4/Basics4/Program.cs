@@ -40,6 +40,20 @@ namespace Basics4
                 Console.WriteLine(k);
                 k++;
             } while (k < 10);
+
+
+            Console.WriteLine("\n\n");
+
+            var random = new Random();
+            for(var i = 0; i < 10; i++)
+                Console.WriteLine(random.Next(1,1000));
+
+            var buffer = new char[10];
+            for (var i = 0; i < 10; i++)
+                buffer[i] = (char)('a' + random.Next(0, 26));
+
+            var password = new string(buffer);
+            Console.WriteLine(password);
         }
     }
 }
