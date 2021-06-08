@@ -2,13 +2,6 @@
 
 namespace Exercises2
 {
-    public enum Select
-    {
-        a=1,
-        b,
-        c,
-        d
-    }
     class Program
     {
         static void Main(string[] args)
@@ -16,6 +9,8 @@ namespace Exercises2
             var count = new Count();
             var continuess = new Continues();
             var factorial = new Factorial();
+            var randomnumber = new RandomNumber();
+            var findlarge = new FindLarge();
             
             
             Console.WriteLine(@"
@@ -44,9 +39,11 @@ namespace Exercises2
                     break;
                 case 4:
                     Console.WriteLine("Random Number Game");
+                    randomnumber.pickRand();
                     break;
                 case 5:
                     Console.WriteLine("Find large Number from a list");
+                    findlarge.largeNumber();
                     break;
                 default:
                     Console.WriteLine("Enter a number from 1 to 5");

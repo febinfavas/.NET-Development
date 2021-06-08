@@ -46,8 +46,10 @@
     <Compile Include="Continues.cs" />
     <Compile Include="Count.cs" />
     <Compile Include="Factorial.cs" />
+    <Compile Include="FindLarge.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomNumber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
