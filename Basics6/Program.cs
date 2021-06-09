@@ -43,8 +43,23 @@ namespace Basics6
                 Console.WriteLine("Invalid");
 
             float i = 12345.85f;
-            Console.WriteLine(i.ToString("C")); 
+            Console.WriteLine(i.ToString("C"));
 
+            // *****String Builder******
+            Console.WriteLine("*****String Builder******");
+            Console.WriteLine("\n\n\n");
+
+            var builder = new StringBuilder("Hello World Hii");
+            builder
+                .Append('-', 10)
+                .AppendLine()
+                .Append("Header")
+                .AppendLine()
+                .Append('-', 10)
+                .Replace('-', '+')
+                .Remove(0, 10)
+                .Insert(0,new string('-', 10));
+            Console.WriteLine(builder);
         }
     }
 }
