@@ -17,8 +17,33 @@ namespace Basics6
             Console.WriteLine("Trim: '{0}'", fullname.Trim());
 
             //upper lower
-            Console.WriteLine("upper0}'", fullname.Trim());
-            Console.WriteLine("Trim: '{0}'", fullname.Trim());
+            Console.WriteLine("upper: '{0}'", fullname.Trim().ToUpper()) ;
+            Console.WriteLine("lower: '{0}'", fullname.Trim().ToLower());
+
+            //substring
+            var index = fullname.IndexOf(' ');
+            var fname = fullname.Substring(0, index);
+            var lname = fullname.Substring(index+1);
+            Console.WriteLine(fname);
+            Console.WriteLine(lname);
+
+            //split
+            var names =fullname.Split(' ');
+            Console.WriteLine("First Name: "+names[0]);
+            Console.WriteLine("Last Name: "+names[1]);
+
+            //Replace
+            var ogname =fullname.Replace("Favas", "Favas Madathil");
+            Console.WriteLine(ogname);
+
+            //Null checking
+            if(String.IsNullOrEmpty(null))
+                Console.WriteLine("Invalid");
+            if (String.IsNullOrWhiteSpace("   "))
+                Console.WriteLine("Invalid");
+
+            float i = 12345.85f;
+            Console.WriteLine(i.ToString("C")); 
 
         }
     }
