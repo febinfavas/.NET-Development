@@ -1,0 +1,72 @@
+﻿#Header
+{
+    background-color: #C0C0C0;
+    width: 844px;
+    height: 83px;
+}
+
+#MenuWrapper 
+{
+    background-color: #C0C000;
+    width: 844px;
+}
+
+#MainContent 
+{
+    background-color: #806060;
+    width: 644px;
+    float: left;
+}
+
+#Sidebar 
+{
+    background-color: #808080;
+    width: 200px;
+    float: right;
+}
+
+#Footer {
+    background-color: #C0C0C0;
+    width: 844px;
+    clear: both;
+}
+
+#PageWrapper {
+    width: 844px;
+    margin: 0 auto;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding: 0 20px;
+}
+
+#MainContent a
+{
+    color: #008000;
+    text-decoration: underline;
+}
+
+#MainContent a:visited
+{
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+#MainContent a:hover
+{
+    color: #FFA500;
+    text-decoration: underline;
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.red {
+    color: red;
+}
+
+.Introduction {
+    font-style: italic;
+    color: #0000FF
+}

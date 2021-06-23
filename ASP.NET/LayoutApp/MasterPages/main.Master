@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="LayoutApp.MasterPages.main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../StyleSheets/MyStyle.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="PageWrapper">
+            <div id="Header" class="auto-style1">
+                <h1>Welcome Febin Favas M</h1>
+            </div>
+            <div id="MenuWrapper">Menu</div>
+            <div id="MainContent">
+                
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                
+
+            </div>
+            <div id="Sidebar">
+                Sidebar Goes Here<br />
+            </div>
+            <div id="Footer">Febin Favas Madathil</div>
+        </div>      
+    </form>
+</body>
+</html>
