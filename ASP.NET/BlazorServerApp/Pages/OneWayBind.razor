@@ -1,0 +1,30 @@
+﻿@page "/onewaybind"
+
+<h3>One Way Bind</h3>
+
+<h4>@Title</h4>
+
+<ul>
+    @foreach(var colour in Colours)
+            {
+                <li>
+                    @colour
+                </li>
+            }
+</ul>
+
+@if (DateTime.Now.DayOfWeek==DayOfWeek.Saturday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
+    {
+          <p class="@weekendFontstyle">It's a WeekEnd !!</p>      
+    }
+else
+    {
+        <p>It's @DateTime.Now.DayOfWeek.ToString()</p>
+    }
+
+@code {
+    string Title = "Febin";
+    List<string> Colours = new List<string> { "Red", "Blue", "Green", "Yellow" };
+
+    string weekendFontstyle = "alert-warning";
+    }

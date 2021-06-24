@@ -1,0 +1,42 @@
+﻿@page "/twoway"
+
+<h3>Convertor</h3>
+
+<label>Inches</label>
+<input @bind="Inches" @bind:event="oninput" type="number" />
+
+<span>=</span>
+
+
+<input @bind="Centi" @bind:event="oninput" type="number" />
+<label>Centimeters</label>
+
+
+@code {
+    double inches = 1;
+    double centi = 2.54;
+
+    public double Inches
+    {
+        get {
+            return inches;
+        }
+        set {
+            centi = value * 2.54;
+            inches = value;
+        }
+    }
+
+    public double Centi
+    {
+        get {
+            return centi;
+        }
+        set {
+            centi = value;
+            inches = value/2.54;
+        }
+    }
+
+
+}
