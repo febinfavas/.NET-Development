@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "About";
+}
+
+<h2>About</h2>
+
+<p>This page give basic idea about Indian Cricket Team</p>
+
+<ul>
+    @for(int i = 1; i <= (int)ViewData["Num"]; i++)
+            {
+                <li>@ViewData["Message"]</li>
+            }
+</ul>
+
